@@ -3,31 +3,71 @@
 <PageTitle>Task Manager App</PageTitle>
 
 <div>
-    <label>Task <input @bind="Task"/><button type="button" @onclick="Save">Save</button></label>
+    <label>Task <input @bind="Task" /><button type="button" @onclick="Save">Save</button></label>
     <div>@ErrorMessage</div>
 </div>
+
 <div style="margin-top: 10px;">
     <ul>
         @foreach (var task in Tasks)
         {
-            <li>@task</li>
+            <li>
+                @if (task.IsDone)
+                {
+                    <s>@task.Name</s>
+                }
+                else
+                {
+                    @task.Name
+                }
+
+                <button type="button" @onclick="() => FlagAsDone(task)">Done</button>
+                <button type="button" @onclick="() => EditTask(task)">Edit</button>
+                <button type="button" @onclick="() => DeleteTask(task)">Delete</button>
+            </li>
         }
     </ul>
 </div>
 
-@code{
+@code {
     private string ErrorMessage;
     private string Task;
-    private List<string> Tasks = new List<string>();
+    private List<TaskItem> Tasks = new List<TaskItem>();
 
-    private void Save(){
-        if (string.IsNullOrWhiteSpace(Task)){
+    private class TaskItem
+    {
+        public string Name { get; set; }
+        public bool IsDone { get; set; }
+    }
+
+    private void Save()
+    {
+        if (string.IsNullOrWhiteSpace(Task))
+        {
             ErrorMessage = "Task must not be empty.";
             return;
         }
 
-        Tasks.Add(Task);
-        Task = string.Empty;       
+        Tasks.Add(new TaskItem { Name = Task, IsDone = false });
+        Task = string.Empty;
         ErrorMessage = string.Empty;
+    }
+
+    private void FlagAsDone(TaskItem task)
+    {
+
+        task.IsDone = !task.IsDone;
+    }
+
+    private void EditTask(TaskItem task)
+    {
+
+
+        task.Name += " (Edited)";
+    }
+
+    private void DeleteTask(TaskItem task)
+    {
+        Tasks.Remove(task);
     }
 }

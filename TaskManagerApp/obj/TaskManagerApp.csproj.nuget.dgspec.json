@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Downloads\\TaskManager App\\TaskManagerApp\\TaskManagerApp.csproj": {}
+    "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Downloads\\TaskManager App\\TaskManagerApp\\TaskManagerApp.csproj": {
+    "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Downloads\\TaskManager App\\TaskManagerApp\\TaskManagerApp.csproj",
+        "projectUniqueName": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
         "projectName": "TaskManagerApp",
-        "projectPath": "C:\\Users\\Owner\\Downloads\\TaskManager App\\TaskManagerApp\\TaskManagerApp.csproj",
+        "projectPath": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Downloads\\TaskManager App\\TaskManagerApp\\obj\\",
+        "outputPath": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,13 +53,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )",
+              "version": "[8.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )",
+              "version": "[8.0.2, )",
               "autoReferenced": true
             }
           },
@@ -77,7 +77,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.1, 8.0.1]"
+              "version": "[8.0.2, 8.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
