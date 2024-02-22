@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kxQJCErp/oz2j0zm8iDvKQCvIlcwUlIuX0RLazoGgmy+Q97LVvMPx9nmUfqqtKiT7QuwQp11vt4WEfZz3CDdJQ==",
+  "dgSpecHash": "YZlXVbchA15qQj2pQhyoMew2zrzjE1J3gplh/Q9nq52u8Apo7lf5mSwOOAP/T2BHX5d2U6d3Cw88cSJe9cOQHA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
+  "projectFilePath": "C:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.1\\microsoft.aspnetcore.authorization.8.0.1.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.1\\microsoft.aspnetcore.components.8.0.1.nupkg.sha512",

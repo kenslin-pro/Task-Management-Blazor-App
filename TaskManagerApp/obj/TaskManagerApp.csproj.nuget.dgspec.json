@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj": {}
+    "C:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj": {
+    "C:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
         "projectName": "TaskManagerApp",
-        "projectPath": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
+        "projectPath": "C:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\TaskManagerApp.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\obj\\",
+        "outputPath": "C:\\Users\\Owner\\Downloads\\Task Management Blazor App\\TaskManagerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
