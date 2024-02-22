@@ -1,33 +1,48 @@
 ﻿@page "/"
 
+<!-- Set the page title to "Task Manager App". -->
 <PageTitle>Task Manager App</PageTitle>
 
+<!-- Container for the task manager application. -->
 <div class="container mt-3">
+    <!-- Task input section with a Save button. -->
     <div class="mb-3">
         <label for="taskInput" class="form-label">Task</label>
         <div class="input-group">
+            <!-- Input field bound to the Task property. -->
             <input id="taskInput" class="form-control" @bind="Task" />
+            <!-- Save button triggers the Save method on click. -->
             <button type="button" class="btn btn-primary" @onclick="Save">Save</button>
         </div>
+        <!-- Display error message if Task is empty. -->
         <div class="text-danger">@ErrorMessage</div>
     </div>
 
+    <!-- Task list displayed as an unordered list. -->
     <ul class="list-group">
+        <!-- Iterate through each task in the Tasks list. -->
         @foreach (var task in Tasks)
         {
+            <!-- Task list item with conditional styling based on IsDone property. -->
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 @if (task.IsDone)
                 {
+                    <!-- Display a strikethrough if the task is marked as done. -->
                     <del>@task.Name</del>
                 }
                 else
                 {
+                    <!-- Display the task name. -->
                     @task.Name
                 }
 
+                <!-- Action buttons for task management. -->
                 <div>
+                    <!-- Button to mark a task as done or undone. -->
                     <button type="button" class="btn btn-success me-2" @onclick="() => FlagAsDone(task)">Done</button>
+                    <!-- Button to edit the task. -->
                     <button type="button" class="btn btn-warning me-2" @onclick="() => EditTask(task)">Edit</button>
+                    <!-- Button to delete the task. -->
                     <button type="button" class="btn btn-danger" @onclick="() => DeleteTask(task)">Delete</button>
                 </div>
             </li>
@@ -35,43 +50,55 @@
     </ul>
 </div>
 
+<!-- Code block with C# logic for the component. -->
 @code {
+    // Properties for handling task input, error message, and task list.
     private string ErrorMessage;
     private string Task;
     private List<TaskItem> Tasks = new List<TaskItem>();
 
+    // Class representing a task with Name and IsDone properties.
     private class TaskItem
     {
         public string Name { get; set; }
         public bool IsDone { get; set; }
     }
 
+    // Method to save a new task to the task list.
     private void Save()
     {
+        // Check if the task input is empty and display an error message.
         if (string.IsNullOrWhiteSpace(Task))
         {
             ErrorMessage = "Task must not be empty.";
             return;
         }
 
+        // Add a new task to the list with default IsDone value as false.
         Tasks.Add(new TaskItem { Name = Task, IsDone = false });
+
+        // Reset the task input and error message.
         Task = string.Empty;
         ErrorMessage = string.Empty;
     }
 
+    // Method to toggle the IsDone property of a task.
     private void FlagAsDone(TaskItem task)
     {
+        // Toggle the IsDone property of the specified task.
         task.IsDone = !task.IsDone;
     }
 
+    // Placeholder logic for editing the task name.
     private void EditTask(TaskItem task)
     {
-        // Placeholder logic for editing the task name
         task.Name += " (Edited)";
     }
 
+    // Method to delete a task from the task list.
     private void DeleteTask(TaskItem task)
     {
+        // Remove the specified task from the task list.
         Tasks.Remove(task);
     }
 }
