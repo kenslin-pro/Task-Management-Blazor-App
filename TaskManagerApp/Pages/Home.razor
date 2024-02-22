@@ -2,28 +2,34 @@
 
 <PageTitle>Task Manager App</PageTitle>
 
-<div>
-    <label>Task <input @bind="Task" /><button type="button" @onclick="Save">Save</button></label>
-    <div>@ErrorMessage</div>
-</div>
+<div class="container mt-3">
+    <div class="mb-3">
+        <label for="taskInput" class="form-label">Task</label>
+        <div class="input-group">
+            <input id="taskInput" class="form-control" @bind="Task" />
+            <button type="button" class="btn btn-primary" @onclick="Save">Save</button>
+        </div>
+        <div class="text-danger">@ErrorMessage</div>
+    </div>
 
-<div style="margin-top: 10px;">
-    <ul>
+    <ul class="list-group">
         @foreach (var task in Tasks)
         {
-            <li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
                 @if (task.IsDone)
                 {
-                    <s>@task.Name</s>
+                    <del>@task.Name</del>
                 }
                 else
                 {
                     @task.Name
                 }
 
-                <button type="button" @onclick="() => FlagAsDone(task)">Done</button>
-                <button type="button" @onclick="() => EditTask(task)">Edit</button>
-                <button type="button" @onclick="() => DeleteTask(task)">Delete</button>
+                <div>
+                    <button type="button" class="btn btn-success me-2" @onclick="() => FlagAsDone(task)">Done</button>
+                    <button type="button" class="btn btn-warning me-2" @onclick="() => EditTask(task)">Edit</button>
+                    <button type="button" class="btn btn-danger" @onclick="() => DeleteTask(task)">Delete</button>
+                </div>
             </li>
         }
     </ul>
@@ -55,14 +61,12 @@
 
     private void FlagAsDone(TaskItem task)
     {
-
         task.IsDone = !task.IsDone;
     }
 
     private void EditTask(TaskItem task)
     {
-
-
+        // Placeholder logic for editing the task name
         task.Name += " (Edited)";
     }
 
